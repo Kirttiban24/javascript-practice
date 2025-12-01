@@ -3,6 +3,7 @@ let grow = 0
 let btn = document.querySelector('button');
 let h2 = document.querySelector('h2')
 let inner = document.querySelector('.inner')
+
 btn.addEventListener('click', function(){
 
     btn.style.pointEvents = "none"
@@ -17,7 +18,7 @@ btn.addEventListener('click', function(){
 
     setTimeout(()=> {
         clearInterval(int)
-        btn.style.innerHTML = "Downloaded"
+        btn.innerHTML = "Downloaded"
         btn.style.opacity = 0.5 
     },num*100);
     
