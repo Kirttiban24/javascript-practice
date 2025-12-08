@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+.piano {
+    position: relative;
+            
+    
+    border: 4px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #222;
+    display: flex;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+
+.key.white {
+    width: 70px;
+    height: 220px;
+    background: #fff;
+    border: 1px solid #777;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+
+.key.black {
+    position: absolute;
+    width: 35px;
+    height: 160px;
+    background: #000;
+    border-radius: 0 0 6px 6px;
+    border: 1px solid #444;
+    z-index: 5;
+    cursor: pointer;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.key.black[data-note="Csharp"] { left: 55px; }   
+.key.black[data-note="Dsharp"] { left: 125px; }  
+.key.black[data-note="Gsharp"] { left: 265px; }  
+.key.black[data-note="Asharp"] { left: 334px; }  
+.key.black[data-note="Fsharp"] { left: 405px; }
+
+
+.key:active {
+    transform: translateY(2px);
+    filter: brightness(0.8);
+}
